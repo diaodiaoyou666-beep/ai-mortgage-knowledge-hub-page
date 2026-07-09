@@ -161,7 +161,8 @@ h2 {
   font-weight: 920;
   line-height: 1.18;
   text-wrap: balance;
-  word-break: keep-all;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 h3 {
@@ -673,18 +674,27 @@ h3 {
 
 .knowledge-section {
   display: grid;
-  grid-template-columns: minmax(340px, 0.48fr) minmax(540px, 0.78fr);
-  gap: 26px;
+  grid-template-columns: minmax(430px, 0.58fr) minmax(520px, 0.74fr);
+  gap: 34px;
   align-items: stretch;
   padding: 92px 0 0;
 }
 
 .graph-copy-block {
+  min-width: 0;
   padding: 26px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid #bdd0eb;
   border-radius: 8px;
   box-shadow: 0 20px 64px rgba(39, 76, 138, 0.08);
+}
+
+.graph-copy-block h2 {
+  max-width: 100%;
+  font-size: clamp(27px, 2.25vw, 34px);
+  line-height: 1.2;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .graph-copy-block p:not(.section-label) {
